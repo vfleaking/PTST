@@ -15,6 +15,9 @@ python inference.py \
     --top_p 0 --freq 8
 ```
 
+* `prompt_file`: can be `vfleaking/DirectHarm4`, `https://huggingface.co/datasets/vfleaking/GSM-Danger` or `data/advbench-harmful-behaviors.csv`
+* `prompt_template_style`: See `prompt_utils.py` for possible options.
+
 ## Safety Test
 
 `gpt4_eval.py` is a variant of `gpt4_eval.py` from [Qi et al. (2023)](https://github.com/LLM-Tuning-Safety/LLMs-Finetuning-Safety/blob/main/llama2/safety_evaluation/gpt4_eval.py)
