@@ -1,5 +1,5 @@
 # PTST
-Code for safety test in "Keeping LLMs Aligned After Fine-tuning: The Crucial Role of Prompt Templates" (https://arxiv.org/abs/2402.18540)
+Code for the safety test in "Keeping LLMs Aligned After Fine-tuning: The Crucial Role of Prompt Templates" (https://arxiv.org/abs/2402.18540)
 
 ## Inference Code
 
@@ -17,15 +17,17 @@ python inference.py \
 
 * `prompt_file`: can be `vfleaking/DirectHarm4`, `https://huggingface.co/datasets/vfleaking/GSM-Danger` or `data/advbench-harmful-behaviors.csv`
 * `prompt_template_style`: See `prompt_utils.py` for possible options.
+* `freq`: the batch size
 
 ## Safety Test
 
-`gpt4_eval.py` is a variant of `gpt4_eval.py` from [Qi et al. (2023)](https://github.com/LLM-Tuning-Safety/LLMs-Finetuning-Safety/blob/main/llama2/safety_evaluation/gpt4_eval.py)
+`gpt4_eval.py` is a multi-thread variant of `gpt4_eval.py` from [Qi et al. (2023)](https://github.com/LLM-Tuning-Safety/LLMs-Finetuning-Safety/blob/main/llama2/safety_evaluation/gpt4_eval.py). Please set your OpenAI API key before running the evaluation command:
 
 ```bash
-python safety_evaluation/gpt4_eval.py --input_file <model-output-in-jsonl>
+python safety_evaluation/gpt4_eval.py --input_file question_output/example.jsonl
 ```
-
+* `input_file`: a ```jsonl``` file with each line containing the input prompt and the model response.
+* The output of the GPT-4 judge will be saved under ```safety_evaluation/gpt4_eval_output```.
 ## Fine-tuning Code
 
 Coming soon! We are basically using Llama's [fine-tuning code](https://github.com/facebookresearch/llama-recipes/blob/main/examples/finetuning.py) but we need some time to clean up the code.
