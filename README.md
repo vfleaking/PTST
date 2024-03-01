@@ -1,5 +1,5 @@
 # PTST
-Code for safety test in "Keeping LLMs Aligned After Fine-tuning: The Crucial Role of Prompt Templates"
+Code for safety test in "Keeping LLMs Aligned After Fine-tuning: The Crucial Role of Prompt Templates" (https://arxiv.org/abs/2402.18540)
 
 ## Inference Code
 
@@ -29,3 +29,14 @@ python safety_evaluation/gpt4_eval.py --input_file <model-output-in-jsonl>
 ## Fine-tuning Code
 
 Coming soon! We are basically using Llama's [fine-tuning code](https://github.com/facebookresearch/llama-recipes/blob/main/examples/finetuning.py) but we need some time to clean up the code.
+
+## Citation Information
+
+```bibtex
+@article{lyu2024keeping,
+  title={Keeping LLMs Aligned After Fine-tuning: The Crucial Role of Prompt Templates},
+  author={Kaifeng Lyu and Haoyu Zhao and Xinran Gu and Dingli Yu and Anirudh Goyal and Sanjeev Arora},
+  journal={arXiv preprint arXiv:2402.18540},
+  year={2024}
+}
+```
