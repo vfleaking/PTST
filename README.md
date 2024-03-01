@@ -34,7 +34,7 @@ Coming soon! We are basically using Llama's [fine-tuning code](https://github.co
 
 ```bibtex
 @article{lyu2024keeping,
-  title={Keeping LLMs Aligned After Fine-tuning: The Crucial Role of Prompt Templates},
+  title={Keeping {LLMs} Aligned After Fine-tuning: The Crucial Role of Prompt Templates},
   author={Kaifeng Lyu and Haoyu Zhao and Xinran Gu and Dingli Yu and Anirudh Goyal and Sanjeev Arora},
   journal={arXiv preprint arXiv:2402.18540},
   year={2024}
