@@ -3,8 +3,8 @@ Code for the safety test in "Keeping LLMs Aligned After Fine-tuning: The Crucial
 
 ## Code for GPT Using OpenAI API
 ### Fine-tuning
-Go to the [gpt-api](gpt-api/) and see `run-gpt-gsm.sh` for an example shell script to fine-tune `gpt-3.5-turbo-0613` on GSM8K. 
-- The code will automatically output the ids of the fine-tuning job and the fine-tuned model and log them to WandB. 
+Go to the folder [gpt-api](gpt-api/) and see `run-gpt-gsm.sh` for an example shell script to fine-tune `gpt-3.5-turbo-0613` on GSM8K. 
+- The code will automatically output the ids of the fine-tuning job and the fine-tuned model, and log them to WandB. 
 - You can also view the training curves when the training ends on WandB.
 - See [gpt-api/prompt_utils.py](gpt-api/prompt_utils.py) for all prompt templates.
 
