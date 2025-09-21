@@ -11,7 +11,14 @@ Go to the folder [gpt-api](gpt-api/) and see `run-gpt-gsm.sh` for an example she
 ### Inference
 Coming soon!
 
-## Code for Llama and Mistral
+## Code for Llama
+### Fine-tuning
+The code for llama-2 finetuning is under the ```llama2``` folder. To finetune on the ChatDoctor dataset, please
+1. Download the dataset [here](https://drive.google.com/file/d/1lyfqIwlLSClhgrCutWuEe_IACNq6XNUt/view)
+2. Move the json file to ```llama2/medical_dataset/```.
+3. Fill in your wandb project name and user name in lines 57 and 58 in ```finetuning.py```.
+4. Run ```train-chatdoctor-lora.sh``` under the ```llama2``` folder.
+
 ### Inference
 `inference.py` is a variant of Llama's [inference code](https://github.com/facebookresearch/llama-recipes/blob/main/examples/inference.py) but with multi-gpu support.
 
@@ -28,9 +35,6 @@ python inference.py \
 * `prompt_file`: can be `vfleaking/DirectHarm4`, `https://huggingface.co/datasets/vfleaking/GSM-Danger` or `data/advbench-harmful-behaviors.csv`
 * `prompt_template_style`: See `prompt_utils.py` for possible options.
 * `freq`: the batch size
-
-### Fine-tuning
-Coming soon! We are basically using Llama's [fine-tuning code](https://github.com/facebookresearch/llama-recipes/blob/main/examples/finetuning.py) but we need some time to clean up the code.
 
 ## Safety Test
 

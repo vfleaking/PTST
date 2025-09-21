@@ -1,7 +1,9 @@
 # Custimized
 gpt-api/wandb
-
-
+test-infer.sh
+test.jsonl
+llama2/ft_datasets/medical_dataset/HealthCareMagic-100k.json
+llama2/wandb
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
